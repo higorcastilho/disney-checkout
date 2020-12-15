@@ -1,0 +1,121 @@
+#checkout-email-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+#checkout-main {
+	color: #CACACA;
+	min-width: 28.8rem;
+	max-width: 37.4rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#checkout-main > p {
+	display: inline-block;
+	min-width: 28.8rem;
+	color: #CACACA;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	letter-spacing: .1rem;
+	margin-top: 3rem;
+	margin-bottom: .3rem;
+	text-align: start;
+}
+
+#checkout-main > h3 {
+	color: #FFF;
+	font-size: 2.4rem;
+	padding-bottom: 2.4rem;
+}
+
+#checkout-main > input {
+	min-width: 28.8rem;
+	max-width: 37.4rem;
+	width: 100%;
+	height: 3.2rem;
+	padding: 2.2rem 1.2rem;
+	font-size: 1.5rem;
+	border-radius: .2rem;
+	background: #31343e;
+	align-self: center;
+	border: .1rem solid #31343e;
+}
+
+::placeholder {
+  color: #CACACA;
+  opacity: 1;
+}
+
+#checkout-main > section {
+	margin-top: 2rem;
+	width: 28.8rem;
+	max-width: 37.4rem;
+	width: 100%;
+	display: flex;
+	align-self: center;
+	font-size: 1.1rem;
+	line-height: 1.8rem;
+}
+
+#checkout-main > section > input[type="checkbox"] {
+	width: 4.5rem;
+	height: 4.5rem;
+	margin-right: 1rem 
+}
+
+#checkout-main > section > p {
+	margin-top: 2.2rem; 
+	font-size: 1.1rem;
+	letter-spacing: .1rem;
+}
+
+#checkout-article {
+	min-width: 30.4rem;
+	max-width: 39.1rem;
+	max-height: 28.6rem;
+	display: flex;
+	flex-direction: column;
+	background: #31343f;
+	padding: .8rem;
+	border-radius: 1rem;
+	margin-right: 0;
+	margin: 0 -.8rem;
+	margin-top: 1rem;
+}
+
+#checkout-article > p {
+	color: #CACACA;
+	font-size: 1.2rem;
+	letter-spacing: .1rem;
+	line-height: 1.8rem;
+}
+
+#checkout-article > p > a {
+	color: #67DBFF;
+	text-decoration: underline;
+}
+
+#checkout-article > a {
+	min-width: 28.8rem;
+	width: 100%;
+	height: 4.8rem;
+	color: #F9F9F9;
+	font-size: 1.5rem;
+	background: #0072d2;
+	padding: 0 2.4rem;
+	font-weight: bold;
+	letter-spacing: .2rem;
+	border-radius: .3rem;
+	border: none;
+	align-self: center;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: .5rem;
+}

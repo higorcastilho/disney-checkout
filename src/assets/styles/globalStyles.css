@@ -1,0 +1,27 @@
+:root {
+	font-size: 62.5%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*,
+input,
+button {
+	font-family: 'Avenir-Heavy', sans-serif;
+}
+
+body {
+	background: #1a1d29;
+	overflow-x: hidden;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box
+}

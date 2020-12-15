@@ -1,0 +1,40 @@
+#checkout-header {
+	min-width: 32rem;
+	min-height: 12.9rem;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	justify-content: center;
+	align-items: center;
+}
+
+#checkout-header > section:first-child {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #CACACA;
+	text-align: end;
+	padding: 2rem 2.5rem;
+	align-self: flex-end;
+}
+
+#checkout-header > section > img {
+	width: 14.8rem;
+	height: 9rem;
+	align-self: auto;
+}
+
+@media (min-width: 600px) {
+	#checkout-header > section:first-child {
+		margin-right: 5rem;
+		padding-top: 2rem;
+		align-self: flex-end;
+	}	
+
+	#checkout-header > section:first-child > p {
+		border: 1px solid #FFF;
+		padding: .5rem;
+		color: #FFF;
+		font-weight: bold;
+		border-radius: .4rem;
+	}
+}
