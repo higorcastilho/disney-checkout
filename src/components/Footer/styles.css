@@ -1,9 +1,11 @@
 #checkout-footer {
 	min-width: 28.8rem;
 	height: 35.4rem;
-	margin-top: 64rem;
+	margin-top: 60rem;
 	background: #000000;
 	padding-top: 1.9rem;
+
+	display: block;
 }
 
 #checkout-footer > img {
