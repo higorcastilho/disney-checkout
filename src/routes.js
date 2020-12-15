@@ -1,9 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import { CSSTransition } from 'react-transition-group'
 
-import About from './pages/About'
+//import About from './pages/About'
 import CheckoutEmail from './pages/CheckoutEmail'
 import CheckoutAgreement from './pages/CheckoutAgreement'
 

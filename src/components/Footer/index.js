@@ -7,7 +7,7 @@ import './styles.css'
 const Footer = () => {
 	return (
 		<footer id="checkout-footer">
-			<img src={DisneyLogo}/>
+			<img src={DisneyLogo} alt=""/>
 		</footer>
 	)
 }

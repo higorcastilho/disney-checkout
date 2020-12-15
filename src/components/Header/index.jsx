@@ -8,7 +8,7 @@ const Header = () => {
 	return (
 		<header id="checkout-header">
 			<section><p>Entrar</p></section>
-			<section><img src={ DisneyLogo }/></section>
+			<section><img src={ DisneyLogo } alt=""/></section>
 		</header>
 	)
 }

@@ -23,10 +23,10 @@ const CheckoutEmail = () => {
 				<p>A Disney usará os seus dados para oferecer e dar suporte aos
 				serviços, personalizar e melhorar a sua experiência no Disney+ e 
 				para enviar informações. Você pode alterar as preferências de 
-				comunicação quando quiser. Podemos usar esses dados conforme explica a nossa <a href="#">Política de Privacidade</a>,
+				comunicação quando quiser. Podemos usar esses dados conforme explica a nossa <a href="https://wwww.google.com">Política de Privacidade</a>,
 				inclusive compartilhá-los com as Empresas do grupo Walt Disney.
 				Ao clicar em "Continuar", você confirma que leu a nossa 
-				<a href="#">Política de Privacidade</a> e os termos específicos
+				<a href="https://wwww.google.com">Política de Privacidade</a> e os termos específicos
 				aplicáveis ao Brasil.
 				</p>
 				<Link to="/checkout-agreement">CONTINUAR</Link>
