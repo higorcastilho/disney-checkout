@@ -37,11 +37,13 @@
 	min-width: 30.4rem;
 	max-width: 39.1rem;
 	max-height: 28.6rem;
+	height: 28rem;
 	display: flex;
 	flex-direction: column;
 	padding: .8rem;
 	border-radius: 1rem;
 	margin-right: 0;
+	background: #FFF;
 	margin: 0 -.8rem;
 	margin-top: 1rem;
 }
@@ -62,6 +64,7 @@
 #checkout-agreement-wrapper > section {
 	background: #1a1d29;
 	opacity: 1;
+	max-width: 38rem;
 	height: 15rem;
 	color: white;
 	position: -webkit-sticky;
