@@ -18,7 +18,7 @@ function CheckoutAgreement () {
 					Ao clicar em "Concordar e Continuar", você confirma que leu nosso
 					Contrato de Assinatura na íntegra e concorda com ele.
 				</div>
-				<Link to="/checkout-agreement">CONCORDAR E CONTINUAR</Link>
+				<Link to="/checkout-password">CONCORDAR E CONTINUAR</Link>
 			</section>
 
 		</div>
