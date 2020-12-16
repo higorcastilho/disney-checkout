@@ -54,14 +54,28 @@
 	top: 0;
 	height: 100%;
 	padding: 2rem;
+	width: 100%;
+	padding-right: 6rem;
 	background: #31343e;
+	font-size: 1.5rem;
+	color: #FFF;
+	outline: none;
 }
 
-#font-awesome-eye {
+.font-awesome-eye {
 	position: absolute;
 	right: 2rem;
 	top: 1.39rem;
 	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+#font-awesome-slashed-eye {
+	display: none;
+}
+
+#font-awesome-eye {
+	display: block;
 }
 
 ::placeholder {

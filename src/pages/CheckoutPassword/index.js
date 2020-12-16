@@ -1,20 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 import './styles.css'
 
 const CheckoutPassword = () => {
+
+	const [ hidePassword, setHidePassword ] = useState(true)
+
+	const handleHidePassword = () => {
+		setHidePassword(() => !hidePassword)
+	}
+
 	return (
 		<div id="checkout-password-wrapper">
 			<main id="checkout-password-main">
 				<p>PASSO 3 DE 4</p>
 				<h3>Crie uma senha</h3>
 				<div>
-					<input placeholder="Senha" />
-					<FontAwesomeIcon id="font-awesome-eye" icon={faEyeSlash} />
+					<input 
+						placeholder="Senha" 
+						type={ hidePassword ? 'password' : 'text'}
+					/>
+					<FontAwesomeIcon 
+						className="font-awesome-eye" 
+						id="font-awesome-slashed-eye" 
+						onClick={() => handleHidePassword()} 
+						style={{display: hidePassword ? 'block' : 'none'}}
+						icon={faEyeSlash} 
+					/>
+					<FontAwesomeIcon 
+						className="font-awesome-eye" 
+						id="font-awesome-eye" 
+						onClick={() => handleHidePassword()} 
+						style={{display: hidePassword ? 'none' : 'block'}}
+						icon={faEye} 
+					/>
 				</div>
 				<section>
 					<p>
