@@ -97,8 +97,9 @@
 
 #checkout-password-article {
 	min-width: 28.8rem;
-	max-width: 39.1rem;
+	max-width: 37.4rem;
 	max-height: 28.6rem;
+	width:100%;
 	display: flex;
 	flex-direction: column;
 	padding: .8rem;
@@ -133,6 +134,7 @@
 
 #checkout-password-wrapper > a {
 	min-width: 28.8rem;
+	max-width: 37.4rem;
 	width: 100%;
 	height: 4.8rem;
 	color: #F9F9F9;
