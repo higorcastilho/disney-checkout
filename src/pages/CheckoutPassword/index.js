@@ -51,7 +51,7 @@ const CheckoutPassword = () => {
 				<p>Você vai usar este e-mail para entrar:</p>
 				<h4>higor@mail.com</h4>
 			</article>
-			<Link to="/checkout-agreement">CONTINUAR</Link>
+			<Link to="/checkout-payment">CONTINUAR</Link>
 		</div>
 	)
 }

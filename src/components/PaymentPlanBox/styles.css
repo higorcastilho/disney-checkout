@@ -1,0 +1,67 @@
+#checkout-payment-plan {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	min-width: 14.2rem;
+	max-width: 18.3rem;
+	height: 6.5rem;
+	width: 49%;
+	padding: 1.05rem 1.2rem;
+	border: 0.15rem;
+	background: #31343e;
+	border-radius: .4rem;
+	align-items: center;
+	margin-bottom: 4rem;
+	cursor: pointer;
+	position: relative;
+
+}
+
+#checkout-payment-plan > h5 {
+	grid-column: 1/4;
+	grid-row: 1/2;
+	font-size: 1.5rem;
+	color: #F9F9F9;
+}
+
+#checkout-payment-plan > p {
+	grid-column: 1/4;
+	grid-row: 2/3;
+	font-size: 1.2rem;
+	color: #F9F9F9;
+}
+
+.checkmark {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #31343e;
+	border-radius: 10px;
+	border: 2px solid #6d7582;
+	position: relative;
+	transition: background-color 0.1s;
+	cursor: pointer;
+}
+
+#check:checked ~.checkmark {
+	background-color: #0072d2;
+	border: 2px solid #0072d2;
+}
+
+.checkmark::after {
+	content: "";
+	position: absolute;
+	width: 4px;
+	height: 8px;
+	border-right: 2px solid #FFF;
+	border-bottom: 2px solid #FFF;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateZ(40deg);
+	opacity: 0;
+}
+
+#check:checked ~ .checkmark::after {
+	opacity: 1;
+	cursor: pointer;
+}
