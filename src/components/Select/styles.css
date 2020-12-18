@@ -1,0 +1,42 @@
+#select-payment-info {
+	position: relative;
+	margin: .7rem 0;
+	width: 100%;
+}
+
+#select-payment-info > p {
+	font-size: .98rem;
+	letter-spacing: .2rem;
+	margin-left: .4rem;
+	margin-bottom: .2rem;
+}
+
+#select-payment-info > section {
+	min-width: 28.8rem;
+	max-width: 37.4rem;
+	width: 100%;
+	height: 5rem;
+	padding: 2.2rem 1.2rem;
+	border-radius: .2rem;
+	background: #31343e;
+	align-self: center;
+	border: .1rem solid #31343e;
+	position: relative;
+}
+
+#select-payment-info > section > select {
+	border: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 1.2rem;
+	padding-bottom: 1.2rem;
+	height: 100%;
+	width: 100%;
+	padding-right: 6rem;
+	background: #31343e;
+	font-size: 1.4rem;
+	letter-spacing: .09rem;
+	color: #f9f9f9;
+	outline: none;
+}

@@ -177,4 +177,5 @@
 
 #credit-card-method-selected > section {
 	display: flex;
+	margin-top: -1.7rem;
 }

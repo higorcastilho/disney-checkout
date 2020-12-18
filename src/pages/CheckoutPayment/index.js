@@ -7,6 +7,8 @@ import { useCustomerData } from '../../context/CustomerData'
 import PaymentPlanBox from '../../components/PaymentPlanBox'
 import PaymentMethodBox from '../../components/PaymentMethodBox'
 import Input from '../../components/Input'
+import Select from '../../components/Select'
+import StoreMyInfo from '../../components/StoreMyInfo'
 
 import CreditCard from '../../assets/images/credit_card.svg'
 import PayPal from '../../assets/images/paypal.svg'
@@ -28,7 +30,7 @@ const CheckoutPayment = () => {
 						23 de dezembro de 2020 para evitar cobranças. 
 					</p>
 				</section>
-				
+
 				<section id="checkout-payment-choose-a-plan">
 					<PaymentPlanBox 
 						term="Mensal"
@@ -69,8 +71,8 @@ const CheckoutPayment = () => {
 
 						<Input 
 							title="NÚMERO DO CARTÃO"
-							placeholder=""
-							icon=""
+							placeholder={false}
+							icon={false}
 							images="true"
 						/>
 
@@ -78,8 +80,8 @@ const CheckoutPayment = () => {
 							<Input 
 								title="DATA DE VALIDADE"
 								placeholder="MM/AA"
-								icon=""
-								images=""
+								icon={false}
+								images={false}
 								minWidth={true}
 							/>
 
@@ -87,9 +89,15 @@ const CheckoutPayment = () => {
 								title="CÓD DE SEGURANÇA"
 								placeholder="CVV"
 								icon="true"
-								images=""
+								images={false}
 							/>
 						</section>
+
+						<Select 
+							title="FORMA DE PAGAMENTO COM CARTÃO"
+						/>
+
+						<StoreMyInfo />
 
 					</div>}
 
