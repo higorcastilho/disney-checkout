@@ -10,7 +10,6 @@ import CheckoutPassword from './pages/CheckoutPassword'
 import CheckoutPayment from './pages/CheckoutPayment'
 
 import Header from './components/Header'
-import Footer from './components/Footer'
 
 import './styles.css'
 
@@ -46,7 +45,6 @@ function Routes() {
 
             </Route>
           ))}
-          <Footer />
         </div>
       </>
     </Router>

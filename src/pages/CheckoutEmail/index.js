@@ -1,18 +1,35 @@
 import React from 'react'
 
+import { useCustomerData } from '../../context/CustomerData'
+
+import Footer from '../../components/Footer'
+
 import { Link } from 'react-router-dom'
 
 import './styles.css'
 
 const CheckoutEmail = () => {
+	
+	const { customerData, setCustomerData } = useCustomerData()
+
 	return (
 		<div id="checkout-email-wrapper">
 			<main id="checkout-main">
 				<p>PASSO 1 DE 4</p>
 				<h3>Digite o seu e-mail</h3>
-				<input placeholder="E-mail" />
+				<input 
+					placeholder="E-mail"
+					onChange={(e) => {
+						setCustomerData({...customerData, email: e.target.value})
+					}} 
+				/>
 				<section>
-					<input type="checkbox" />
+					<input 
+						type="checkbox" 
+						onChange={(e) => {
+							setCustomerData({...customerData, newsletter: e.target.checked})
+						}}
+					/>
 					<p>
 					Sim! Quero receber notícias, ofertas especiais e outras
 					informações do Disney+ e das empresas do grupo Walt Disney. 
@@ -29,8 +46,16 @@ const CheckoutEmail = () => {
 				<a href="https://wwww.google.com">Política de Privacidade</a> e os termos específicos
 				aplicáveis ao Brasil.
 				</p>
-				<Link to="/checkout-agreement">CONTINUAR</Link>
+				<Link 
+					onClick={() => 
+						{console.log(customerData)
+					}} 
+					to="/checkout-agreement"
+				>
+					CONTINUAR
+				</Link>
 			</article>
+			<Footer marginTop="12rem"/>
 		</div>
 	)
 }

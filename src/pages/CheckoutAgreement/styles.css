@@ -8,7 +8,7 @@
 #checkout-agreement-main {
 	color: #CACACA;
 	min-width: 28.8rem;
-	max-width: 37.4rem;
+	max-width: 45.4rem;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -36,16 +36,17 @@
 #checkout-agreement-article {
 	min-width: 30.4rem;
 	max-width: 39.1rem;
-	max-height: 28.6rem;
-	height: 28rem;
 	display: flex;
 	flex-direction: column;
 	padding: .8rem;
 	border-radius: 1rem;
 	margin-right: 0;
-	background: #FFF;
 	margin: 0 -.8rem;
 	margin-top: 1rem;
+	color: #FFF;
+	font-size: 1.5rem;
+	letter-spacing: .1rem;
+	line-height: 1.8rem;
 }
 
 #checkout-agreement-article > p {
@@ -68,10 +69,12 @@
 	height: 15rem;
 	color: white;
 	position: -webkit-sticky;
-  	position: fixed;
+  	position: sticky;
   	bottom: 0;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	text-align: center;
 	padding: 2rem;
+	border-top: 1px solid #3b3e48;
 }
 
 #checkout-agreement-wrapper > section > a {
@@ -97,5 +100,11 @@
 @media (min-width: 600px) {
 	#checkout-agreement-article {
 		overflow-y: auto;
+		max-height: 24rem;
+		max-width: 48rem;
+	}
+	#checkout-agreement-wrapper > section {
+		position: relative;
+		border-top: none;
 	}
 }

@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 
+import { useCustomerData } from '../../context/CustomerData'
+
 import { Link } from 'react-router-dom'
+
+import Footer from '../../components/Footer'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
@@ -9,6 +13,7 @@ import './styles.css'
 
 const CheckoutPassword = () => {
 
+	const { customerData, setCustomerData } = useCustomerData()
 	const [ hidePassword, setHidePassword ] = useState(true)
 
 	const handleHidePassword = () => {
@@ -22,7 +27,10 @@ const CheckoutPassword = () => {
 				<h3>Crie uma senha</h3>
 				<div>
 					<input 
-						placeholder="Senha" 
+						placeholder="Senha"
+						onChange={e => {
+							setCustomerData({...customerData, password: e.target.value})
+						}} 
 						type={ hidePassword ? 'password' : 'text'}
 					/>
 					<FontAwesomeIcon 
@@ -51,7 +59,15 @@ const CheckoutPassword = () => {
 				<p>Você vai usar este e-mail para entrar:</p>
 				<h4>higor@mail.com</h4>
 			</article>
-			<Link to="/checkout-payment">CONTINUAR</Link>
+			<Link 
+				onClick={() => 
+					{console.log(customerData)
+				}} 
+				to="/checkout-payment"
+			>
+				CONTINUAR
+			</Link>
+			<Footer marginTop="34rem"/>
 		</div>
 	)
 }

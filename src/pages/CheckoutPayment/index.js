@@ -9,6 +9,7 @@ import PaymentMethodBox from '../../components/PaymentMethodBox'
 import Input from '../../components/Input'
 import Select from '../../components/Select'
 import StoreMyInfo from '../../components/StoreMyInfo'
+import Footer from '../../components/Footer'
 
 import CreditCard from '../../assets/images/credit_card.svg'
 import PayPal from '../../assets/images/paypal.svg'
@@ -26,7 +27,7 @@ const CheckoutPayment = () => {
 				<h3>Faça um teste grátis de 7 dias</h3>
 				<section>
 					<p>
-						Depois, R$ 27,90/mês. Cancele quando quiser. Cancele antes de 
+						Depois, {customerData.price}/mês. Cancele quando quiser. Cancele antes de 
 						23 de dezembro de 2020 para evitar cobranças. 
 					</p>
 				</section>
@@ -73,7 +74,7 @@ const CheckoutPayment = () => {
 							title="NÚMERO DO CARTÃO"
 							placeholder={false}
 							icon={false}
-							images="true"
+							images={true}
 						/>
 
 						<section>
@@ -88,7 +89,7 @@ const CheckoutPayment = () => {
 							<Input 
 								title="CÓD DE SEGURANÇA"
 								placeholder="CVV"
-								icon="true"
+								icon={true}
 								images={false}
 							/>
 						</section>
@@ -99,6 +100,26 @@ const CheckoutPayment = () => {
 
 						<StoreMyInfo />
 
+						<Input 
+							title="CPF"
+							placeholder=""
+							icon={true}
+							images={false}
+						/>
+						<p>
+							Ao selecionar "Concordar e Assinar", você concorda
+							em iniciar a assinatura imediatamente e que o pagamento
+							mensal ou anual não é reembolsável.
+							Enviaremos um aviso 30 dias antes da renovação
+							anual. Se você não cancelar a assinatura antes do
+							término do teste grátis em 25 de dezembro de 2020,
+							cobraremos a anuidade ou mensalidade padrão de forma 
+							recorrente na sua forma de pagamento cadastrada. Você
+							pode cancelar quando quiser e o cancelamento entrará em
+							vigor no final do período de cobrança. ATENÇÃO: no caso 
+							de cartões múltiplos (função crédito/débito), a cobrança
+							será na função crédito.
+						</p>
 					</div>}
 
 					{ (customerData.paymentMethod === 'paypal') && <div id="paypal-method-selected" >PayPal</div>}
@@ -106,7 +127,8 @@ const CheckoutPayment = () => {
 				</article>
 
 			</main>
-			<Link to="/checkout-payment">CONTINUAR</Link>
+			<Link to="/checkout-payment">CONCORDAR E ASSINAR</Link>
+			<Footer marginTop="30rem"/>
 		</div>
 	)
 }

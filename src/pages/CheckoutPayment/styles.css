@@ -179,3 +179,10 @@
 	display: flex;
 	margin-top: -1.7rem;
 }
+
+#credit-card-method-selected > p {
+	font-size: 1.2rem;
+	color: #F9F9F9;
+	line-height: 1.8rem;
+	margin-bottom: 1.2rem;
+}
