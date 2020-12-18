@@ -170,3 +170,11 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+#checkout-payment-choose-a-method {
+	display: flex;
+}
+
+#credit-card-method-selected > section {
+	display: flex;
+}

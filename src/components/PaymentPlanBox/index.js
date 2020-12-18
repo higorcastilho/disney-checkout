@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 
 import './styles.css'
 
-const PaymentPlanBox = () => {
+const PaymentPlanBox = ({ term, price, plan }) => {
 
 	const [boxInfo, setBoxInfo] = useState({
 		checked: false,
@@ -12,8 +12,8 @@ const PaymentPlanBox = () => {
 	const box = useRef()
 
 	useEffect(() => {
-		box.current.style.border = boxInfo.checked ? '1px solid #0483ee' : ''
-		box.current.style.background = boxInfo.checked ? '#153151' : ''
+		box.current.style.border = (boxInfo.checked) ? '1px solid #0483ee' : ''
+		box.current.style.background = (boxInfo.checked) ? '#153151' : '' 
 	}, [boxInfo])
 
 	return (
@@ -24,8 +24,8 @@ const PaymentPlanBox = () => {
 				setBoxInfo({...boxInfo, checked: !boxInfo.checked})
 			}}
 		>
-			<h5>Mensal</h5>
-			<p>RS$ 27,90</p>
+			<h5>{term}</h5>
+			<p>{price}</p>
 			<div className="checkbox-wrapper">
 				<input
 					hidden

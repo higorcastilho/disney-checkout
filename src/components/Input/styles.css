@@ -1,0 +1,66 @@
+#input-payment-info {
+	position: relative;
+	margin: 1.8rem 0;
+	width: 100%;
+}
+
+#input-payment-info > p {
+	font-size: .98rem;
+	letter-spacing: .2rem;
+	margin-left: .4rem;
+	margin-bottom: .2rem;
+}
+
+#input-payment-info > section {
+	min-width: 28.8rem;
+	max-width: 37.4rem;
+	width: 100%;
+	height: 5rem;
+	padding: 2.2rem 1.2rem;
+	font-size: 1.5rem;
+	border-radius: .2rem;
+	background: #31343e;
+	align-self: center;
+	border: .1rem solid #31343e;
+	position: relative;
+}
+
+#input-payment-info > section > input {
+	border: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	padding: 2rem;
+	width: 100%;
+	padding-right: 6rem;
+	background: #31343e;
+	font-size: 1.5rem;
+	color: #FFF;
+	outline: none;
+}
+
+.font-awesome-icon {
+	position: absolute;
+	right: 2rem;
+	top: 2.6rem;
+	font-size: 1.8rem;
+	cursor: pointer;
+	display: block;
+}
+
+.flag-card {
+	position: absolute;
+	right: 1rem;
+	top: 2.2rem;
+	font-size: 1.8rem;
+	cursor: pointer;
+	display: block;
+	display: flex;
+}
+
+.flag-card > img {
+	width: 3rem;
+	height: 3rem;
+	margin: 0 .2rem;
+}
