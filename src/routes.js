@@ -14,7 +14,7 @@ import Header from './components/Header'
 import './styles.css'
 
 const routes = [
-  { path: '/checkout-email', name: 'CheckoutEmail', Component: CheckoutEmail },
+  { path: '/', name: 'CheckoutEmail', Component: CheckoutEmail },
   { path: '/checkout-agreement', name: 'CheckoutAgreement', Component: CheckoutAgreement },
   { path: '/checkout-password', name: 'CheckoutPassword', Component: CheckoutPassword },
   { path: '/checkout-payment', name: 'CheckoutPayment', Component: CheckoutPayment }

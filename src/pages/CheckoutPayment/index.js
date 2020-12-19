@@ -24,7 +24,7 @@ const CheckoutPayment = () => {
 
 	window.addEventListener('scroll', () => { 
 		const yPos = window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-		if (yPos < -1.080) {
+		if (yPos < -.7) {
 			setTogglePayPalButton('block')
 		}
 	})
