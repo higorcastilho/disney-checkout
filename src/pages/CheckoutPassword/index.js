@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import { useCustomerData } from '../../context/CustomerData'
 
 import { Link } from 'react-router-dom'
 
 import Footer from '../../components/Footer'
+import Spinner from '../../components/Spinner'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
@@ -13,11 +15,21 @@ import './styles.css'
 
 const CheckoutPassword = () => {
 
+	const history = useHistory()
 	const { customerData, setCustomerData } = useCustomerData()
 	const [ hidePassword, setHidePassword ] = useState(true)
+	const [ toggleSpinner, setToggleSpinner ] = useState('none')
 
 	const handleHidePassword = () => {
 		setHidePassword(() => !hidePassword)
+	}
+
+	const handleCheckPassword = () => {
+		setToggleSpinner('block')
+		setTimeout(() => {
+			setToggleSpinner('none') 
+			history.push('/checkout-payment')
+		}, 2000)
 	}
 
 	return (
@@ -59,14 +71,16 @@ const CheckoutPassword = () => {
 				<p>Você vai usar este e-mail para entrar:</p>
 				<h4>higor@mail.com</h4>
 			</article>
-			<Link 
-				onClick={() => 
-					{console.log(customerData)
+			<button 
+				onClick={() => { 
+					handleCheckPassword()
+					console.log(customerData)
 				}} 
 				to="/checkout-payment"
 			>
-				CONTINUAR
-			</Link>
+				<Spinner toggleSpinner={toggleSpinner}/>
+				{ (toggleSpinner === 'none') && <p>CONTINUAR</p> }
+			</button>
 			<Footer marginTop="34rem"/>
 		</div>
 	)
