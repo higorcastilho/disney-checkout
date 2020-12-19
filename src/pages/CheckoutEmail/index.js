@@ -57,7 +57,7 @@ const CheckoutEmail = () => {
 				aplicáveis ao Brasil.
 				</p>
 				<a
-					href="https://www.google.com" 
+					href="#" 
 					onClick={() => {
 						console.log(customerData)
 						handleCheckEmail()
