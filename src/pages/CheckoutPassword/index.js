@@ -3,8 +3,6 @@ import { useHistory } from 'react-router-dom'
 
 import { useCustomerData } from '../../context/CustomerData'
 
-import { Link } from 'react-router-dom'
-
 import Footer from '../../components/Footer'
 import Spinner from '../../components/Spinner'
 
