@@ -6,8 +6,6 @@ import { useCustomerData } from '../../context/CustomerData'
 import Footer from '../../components/Footer'
 import Spinner from '../../components/Spinner'
 
-import { Link } from 'react-router-dom'
-
 import './styles.css'
 
 const CheckoutEmail = () => {
@@ -58,7 +56,8 @@ const CheckoutEmail = () => {
 				<a href="https://wwww.google.com">Política de Privacidade</a> e os termos específicos
 				aplicáveis ao Brasil.
 				</p>
-				<a 
+				<a
+					href="https://www.google.com" 
 					onClick={() => {
 						console.log(customerData)
 						handleCheckEmail()
