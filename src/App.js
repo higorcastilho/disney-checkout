@@ -1,5 +1,5 @@
 import React from 'react'
-import Routes from './routes'
+import SliderRouter from './router'
 
 import { CustomerDataProvider } from './context/CustomerData'
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
     	<CustomerDataProvider>
-      	<Routes />
+      	<SliderRouter />
       </CustomerDataProvider>
     </div>
   );

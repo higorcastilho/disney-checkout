@@ -3,13 +3,12 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import { CSSTransition } from 'react-transition-group'
 
-//import About from './pages/About'
-import CheckoutEmail from './pages/CheckoutEmail'
-import CheckoutAgreement from './pages/CheckoutAgreement'
-import CheckoutPassword from './pages/CheckoutPassword'
-import CheckoutPayment from './pages/CheckoutPayment'
+import CheckoutEmail from '../pages/CheckoutEmail'
+import CheckoutAgreement from '../pages/CheckoutAgreement'
+import CheckoutPassword from '../pages/CheckoutPassword'
+import CheckoutPayment from '../pages/CheckoutPayment'
 
-import Header from './components/Header'
+import Header from '../components/Header'
 
 import './styles.css'
 
@@ -20,7 +19,7 @@ const routes = [
   { path: '/checkout-payment', name: 'CheckoutPayment', Component: CheckoutPayment }
 ]
 
-function Routes() {
+function SliderRouter() {
   return (
     <Router>
       <>
@@ -52,4 +51,4 @@ function Routes() {
 }
 
 
-export default Routes
+export default SliderRouter
