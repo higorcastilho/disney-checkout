@@ -56,8 +56,7 @@ const CheckoutEmail = () => {
 				<a href="https://wwww.google.com">Política de Privacidade</a> e os termos específicos
 				aplicáveis ao Brasil.
 				</p>
-				<a
-					href="#" 
+				<button
 					onClick={() => {
 						console.log(customerData)
 						handleCheckEmail()
@@ -65,7 +64,7 @@ const CheckoutEmail = () => {
 				>
 					<Spinner toggleSpinner={toggleSpinner}/>
 					{ (toggleSpinner === 'none') && <p>CONTINUAR</p> }
-				</a>
+				</button>
 			</article>
 			<Footer marginTop="12rem"/>
 		</div>
