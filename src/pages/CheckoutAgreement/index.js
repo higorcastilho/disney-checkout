@@ -36,7 +36,7 @@ function CheckoutAgreement () {
 						CONCORDAR E CONTINUAR
 				</Link>
 			</section>
-			<Footer marginTop="5rem"/>
+			<Footer marginTop="8rem"/>
 		</div>
 	)
 }
