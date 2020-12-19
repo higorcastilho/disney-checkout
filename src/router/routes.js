@@ -3,6 +3,10 @@ import CheckoutAgreement from '../pages/CheckoutAgreement'
 import CheckoutPassword from '../pages/CheckoutPassword'
 import CheckoutPayment from '../pages/CheckoutPayment'
 
+import header from '../components/Header'
+
+export const Header = header
+
 const routes = [
   { path: '/', name: 'CheckoutEmail', Component: CheckoutEmail },
   { path: '/checkout-agreement', name: 'CheckoutAgreement', Component: CheckoutAgreement },

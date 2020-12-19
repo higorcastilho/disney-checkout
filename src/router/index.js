@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import { CSSTransition } from 'react-transition-group'
 
-import Header from '../components/Header'
-import routes from './routes'
+import routes, { Header } from './routes'
 
 import './styles.css'
 
