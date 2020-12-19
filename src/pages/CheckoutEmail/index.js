@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import { useCustomerData } from '../../context/CustomerData'
 
 import Footer from '../../components/Footer'
+import Spinner from '../../components/Spinner'
 
 import { Link } from 'react-router-dom'
 
@@ -10,7 +12,17 @@ import './styles.css'
 
 const CheckoutEmail = () => {
 	
+	const history = useHistory()
 	const { customerData, setCustomerData } = useCustomerData()
+	const [ toggleSpinner, setToggleSpinner ] = useState('none')
+
+	const handleCheckEmail = () => {
+		setToggleSpinner('block')
+		setTimeout(() => {
+			setToggleSpinner('none') 
+			history.push('/checkout-agreement')
+		}, 2000)
+	}
 
 	return (
 		<div id="checkout-email-wrapper">
@@ -46,14 +58,15 @@ const CheckoutEmail = () => {
 				<a href="https://wwww.google.com">Política de Privacidade</a> e os termos específicos
 				aplicáveis ao Brasil.
 				</p>
-				<Link 
-					onClick={() => 
-						{console.log(customerData)
+				<a 
+					onClick={() => {
+						console.log(customerData)
+						handleCheckEmail()
 					}} 
-					to="/checkout-agreement"
 				>
-					CONTINUAR
-				</Link>
+					<Spinner toggleSpinner={toggleSpinner}/>
+					{ (toggleSpinner === 'none') && <p>CONTINUAR</p> }
+				</a>
 			</article>
 			<Footer marginTop="12rem"/>
 		</div>
