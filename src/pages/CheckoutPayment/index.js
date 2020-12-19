@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
@@ -13,12 +13,23 @@ import Footer from '../../components/Footer'
 
 import CreditCard from '../../assets/images/credit_card.svg'
 import PayPal from '../../assets/images/paypal.svg'
+import PayPalButton from '../../assets/images/paypal_button.svg'
 
 import './styles.css'
 
 const CheckoutPayment = () => {	
 
 	const { customerData } = useCustomerData()
+	const [ togglePayPalButton, setTogglePayPalButton ] = useState('none')
+
+	window.addEventListener('scroll', () => { 
+		const yPos = window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+		if (yPos < -1.080) {
+			setTogglePayPalButton('block')
+		}
+	})
+
+
 
 	return (
 		<div id="checkout-payment-wrapper">
@@ -120,14 +131,50 @@ const CheckoutPayment = () => {
 							de cartões múltiplos (função crédito/débito), a cobrança
 							será na função crédito.
 						</p>
+						<Link to="/checkout-payment">CONCORDAR E ASSINAR</Link>
 					</div>}
 
-					{ (customerData.paymentMethod === 'paypal') && <div id="paypal-method-selected" >PayPal</div>}
+					{ (customerData.paymentMethod === 'paypal') && <div id="paypal-method-selected" >
+						<StoreMyInfo />
+
+						<Input 
+							title="CPF"
+							placeholder=""
+							icon={true}
+							images={false}
+						/>
+
+						<p>
+							Faça um teste grátis com O PayPal. Para concluir a 
+							assinatura, clique no botão Pague com PayPal e use
+							seu e-mail e senha para entrar no PayPal.
+						</p>
+						<p>
+							Ao selecionar "Pague com PayPal", você concorda
+							em iniciar a assinatura imediatamente e que o pagamento
+							mensal ou anual não é reembolsável.
+							Enviaremos um aviso 30 dias antes da renovação
+							anual. Se você não cancelar a assinatura antes do
+							término do teste grátis em 25 de dezembro de 2020,
+							cobraremos a anuidade ou mensalidade padrão de forma 
+							recorrente na sua forma de pagamento cadastrada. Você
+							pode cancelar quando quiser e o cancelamento entrará em
+							vigor no final do período de cobrança. ATENÇÃO: no caso 
+							de cartões múltiplos (função crédito/débito), a cobrança
+							será na função crédito. 
+						</p>
+						<Link to="/checkout-payment">
+							{ (togglePayPalButton === 'block') && <p>Pague com</p> }
+							<img 
+								src={PayPalButton} 
+								alt=""
+							/>
+						</Link>
+					</div>}
 				
 				</article>
 
 			</main>
-			<Link to="/checkout-payment">CONCORDAR E ASSINAR</Link>
 			<Footer marginTop="30rem"/>
 		</div>
 	)
