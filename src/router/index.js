@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 
 import { CSSTransition } from 'react-transition-group'
 
@@ -7,9 +8,20 @@ import routes, { Header } from './routes'
 
 import './styles.css'
 
+const history = createBrowserHistory()
+history.listen(location => {
+  setTimeout(() => {
+    console.log(location.action)
+    if (location.action === 'POP') {
+      return
+    }
+    window.scrollTo(0, 0)
+  })
+})
+
 function SliderRouter() {
   return (
-    <Router>
+    <Router history={history} onUpdate={() => window.scrollTo(0, 0)}>
       <>
         <div className="container">
           <Header />
@@ -37,6 +49,5 @@ function SliderRouter() {
     </Router>
   )
 }
-
 
 export default SliderRouter
